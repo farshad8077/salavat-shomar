@@ -1,7 +1,12 @@
 <?php
 ob_start();
 define('API_KEY','XXX:XXX');
-
+/
+include "config.php";
+define('API_KEY','455923151:AAGJdyp-NWBjdWwf-qaXE_FFcEGvj2V6Zoo');
+$admin = "462092087";
+$channeluse = "-1001138985158";
+$update = json_decode(file_get_contents('php://input'));
 function onyx($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
     $ch = curl_init();
